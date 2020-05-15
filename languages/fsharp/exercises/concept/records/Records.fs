@@ -1,12 +1,31 @@
 module Records
 
-// TODO: please define the 'Approval' discriminated union type
+type Weapon = { Name: string; Attack: int }
 
-// TODO: please define the 'Cuisine' discriminated union type
+type Armor = { Defense: int; Durability: int }
 
-// TODO: please define the 'Genre' discriminated union type
+type Character =
+    { Name: string
+      HitPoints: int
+      Armor: Armor
+      Weapon: Weapon }
 
-// TODO: please define the 'Activity' discriminated union type
+let weapon name damage = { Name = name; Attack = damage }
 
-let rateActivity (activity: Activity): Approval =
-    failwith "Please implement the 'rateActivity' function"
+let armor defense = { Defense = defense; Durability = 100 }
+
+let character name hitPoints armor weapon =
+    { Name = name
+      HitPoints = hitPoints
+      Armor = armor
+      Weapon = weapon }
+
+let swapWeapon character newWeapon = { character with Weapon = newWeapon }
+
+let attack attacker target =
+    match target with
+    | { Armor = { Durability = 0 } } ->
+
+
+        { target with
+              HitPoints = target.HitPoints - attacker.Weapon.Attack }
