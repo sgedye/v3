@@ -40,6 +40,16 @@
         "prerequisites": ["basics"]
       },
       {
+        "slug": "tuples",
+        "uuid": "f729493d-2249-4c10-9c77-da907d10aae1",
+        "concepts": [
+          "tuples",
+          "basic-pattern-matching",
+          "basic-floating-point-numbers"
+        ],
+        "prerequisites": ["multiple-clause-functions"]
+      },
+      {
         "slug": "maps",
         "uuid": "e7f3ba2b-a380-45d3-a48d-7ef3dc318a31",
         "concepts": ["module-attributes-as-constants", "maps"],
